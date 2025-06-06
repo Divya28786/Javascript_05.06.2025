@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript assessment 1 - 05.06.2025</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+        input{
+            padding: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Number Validation Using Javascript</h1>
+    <br>
+    <div>
+        <label for="mobnumber">Enter Mobile Number</label>
+        <input type="text" id="mobnumber" placeholder="Enter 10 Digit Mobile Number">
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Validate" onclick="ValidateNumber()">
+    </div>
+    <script>
+        function ValidateNumber(){
+            let mobile_number=document.getElementById("mobnumber").value;
+            if (mobile_number.length === 10 &&  /^\d+$/.test(mobile_number)){
+                alert("Mobile number correct");
+            }else{
+                alert("Invalid Mobile Number");
+            }
+        }
+    </script>
+</body>
+</html>
